@@ -1,6 +1,7 @@
-# Static site: serve from repo root (index.html is the car simulation)
-# Explicit no-op build so Netlify does NOT run pip/npm install (which would fail on Python deps)
+# Static car simulation lives in docs/ — build only from docs/ so Netlify
+# never sees requirements.txt (avoids "No space left on device" from pip/torch).
 [build]
+  base = "docs"
   publish = "."
   command = "echo 'Static site — no build required'"
 

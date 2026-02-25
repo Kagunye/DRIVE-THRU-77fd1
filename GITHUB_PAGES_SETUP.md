@@ -12,7 +12,7 @@ Use Netlify to host the same site. No GitHub Pages setup needed.
 
 1. Click: **[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/Kagunye/DRIVE-THRU)**
 2. Log in with GitHub if asked and authorize Netlify.
-3. Leave **Build command** empty; set **Publish directory** to `.` (a single dot) or leave as is if it already shows root.
+3. Leave **Build command** as in `netlify.toml` (or empty). **Publish directory** should be `.` for the `docs` folder (Netlify builds from `docs/` so it does not install Python and run out of disk space).
 4. Click **Deploy site**.
 5. In 1–2 minutes you’ll get a URL like `https://something-random.netlify.app` — that’s your live car simulation.
 
